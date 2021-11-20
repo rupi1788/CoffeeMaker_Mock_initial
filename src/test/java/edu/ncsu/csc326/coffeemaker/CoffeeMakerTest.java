@@ -139,70 +139,155 @@ public class CoffeeMakerTest {
 	}
 
 	/**
-	 * Given a coffeemaker with initialize recipes to test
-	 * When we add new recipe where
-	 *   no space available
+	 * When we set name  of a recipe where
+	 *   input is null.
+	 */
+
+	@Test
+	public void testSetNameInRecipe1() {
+
+			recipe1 = new Recipe();
+			recipe1.setName(null);
+		Assert.assertEquals(recipe1.getName(), "");
+	}
+
+	/**
+	 * When we set price of a recipe where
+	 *   input is invalid.
 	 * @throws RecipeException
 	 */
-//	@Test
-//	public void testAddRecipeHavingNoPlaceToAdd2() throws RecipeException {
-//		Inventory inventory = new Inventory();
-//		RecipeBook recipeBook = mock(RecipeBook.class);
-//		CoffeeMaker coffeeMaker8= new CoffeeMaker(recipeBook, inventory);
-//		//Set up for r1
-//		recipe1 = new Recipe();
-//		recipe1.setName("Coffee");
-//		recipe1.setAmtChocolate("0");
-//		recipe1.setAmtCoffee("3");
-//		recipe1.setAmtMilk("1");
-//		recipe1.setAmtSugar("1");
-//		recipe1.setPrice("50");
-////		coffeeMaker8.addRecipe(recipe1);
-//
-//		//Set up for r2
-//		recipe2 = new Recipe();
-//		recipe2.setName("Mocha");
-//		recipe2.setAmtChocolate("20");
-//		recipe2.setAmtCoffee("3");
-//		recipe2.setAmtMilk("1");
-//		recipe2.setAmtSugar("1");
-//		recipe2.setPrice("75");
-////		coffeeMaker8.addRecipe(recipe2);
-//
-//		//Set up for r3
-//		recipe3 = new Recipe();
-//		recipe3.setName("Latte");
-//		recipe3.setAmtChocolate("0");
-//		recipe3.setAmtCoffee("3");
-//		recipe3.setAmtMilk("3");
-//		recipe3.setAmtSugar("1");
-//		recipe3.setPrice("100");
-////		coffeeMaker8.addRecipe(recipe3);
-//
-//		//Set up for r4
-//		recipe4 = new Recipe();
-//		recipe4.setName("Hot Chocolate");
-//		recipe4.setAmtChocolate("4");
-//		recipe4.setAmtCoffee("0");
-//		recipe4.setAmtMilk("1");
-//		recipe4.setAmtSugar("1");
-//		recipe4.setPrice("75");
-//		coffeeMaker8.addRecipe(recipe4);
-//
-//		//Set up for r5
-//		recipe5 = new Recipe();
-//		recipe5.setName("Super Hot Chocolate");
-//		recipe5.setAmtChocolate("6");
-//		recipe5.setAmtCoffee("0");
-//		recipe5.setAmtMilk("1");
-//		recipe5.setAmtSugar("1");
-//		recipe5.setPrice("100");
-//		assertFalse( coffeeMaker8.addRecipe(recipe5));
-//
-//	}
+	@Test
+	public void testSetPriceInRecipe1() throws RecipeException, InventoryException {
+		try {
+			recipe1 = new Recipe();
+			recipe1.setPrice("-56");
+		}
+		catch (RecipeException z) {
+			Assert.assertTrue(true);
+			return;
+		}
+		Assert.fail();
+	}
+	@Test
+	public void testSetPriceInRecipe2() throws RecipeException, InventoryException {
+		try {
+			recipe1 = new Recipe();
+			recipe1.setPrice("abc");
+		}
+		catch (RecipeException z) {
+			Assert.assertTrue(true);
+			return;
+		}
+		Assert.fail();
+	}
 
 
+	/**
+	 * When we set amount of ingredients in recipe where
+	 *   input of ingredient is invalid.
+	 * @throws RecipeException
+	 */
 
+	@Test
+	public void testSetCoffeeInRecipe1() throws RecipeException, InventoryException {
+		try {
+		recipe1 = new Recipe();
+		recipe1.setAmtCoffee("-3");
+		}
+		catch (RecipeException z) {
+			Assert.assertTrue(true);
+			return;
+		}
+		Assert.fail();
+	}
+
+	@Test
+	public void testSetCoffeeInRecipe2() throws RecipeException, InventoryException {
+		try {
+			recipe1 = new Recipe();
+			recipe1.setAmtCoffee("xyz");
+		}
+		catch (RecipeException z) {
+			Assert.assertTrue(true);
+			return;
+		}
+		Assert.fail();
+	}
+
+	@Test
+	public void testSetMilkInRecipe1() throws RecipeException, InventoryException {
+		try {
+			recipe1 = new Recipe();
+			recipe1.setAmtMilk("-5");
+		}
+		catch (RecipeException z) {
+			Assert.assertTrue(true);
+			return;
+		}
+		Assert.fail();
+	}
+	@Test
+	public void testSetMilkInRecipe2() throws RecipeException, InventoryException {
+		try {
+			recipe1 = new Recipe();
+			recipe1.setAmtMilk("pqr");
+		}
+		catch (RecipeException z) {
+			Assert.assertTrue(true);
+			return;
+		}
+		Assert.fail();
+	}
+
+	@Test
+	public void testSetChocolateInRecipe1() throws RecipeException, InventoryException {
+		try {
+			recipe1 = new Recipe();
+			recipe1.setAmtChocolate("-3");
+		}
+		catch (RecipeException z) {
+			Assert.assertTrue(true);
+			return;
+		}
+		Assert.fail();
+	}
+	@Test
+	public void testSetChocolateInRecipe2() throws RecipeException, InventoryException {
+		try {
+			recipe1 = new Recipe();
+			recipe1.setAmtChocolate("efg");
+		}
+		catch (RecipeException z) {
+			Assert.assertTrue(true);
+			return;
+		}
+		Assert.fail();
+	}
+
+	@Test
+	public void testSetSugarInRecipe1() throws RecipeException, InventoryException {
+		try {
+			recipe1 = new Recipe();
+			recipe1.setAmtSugar("-7");
+		}
+		catch (RecipeException z) {
+			Assert.assertTrue(true);
+			return;
+		}
+		Assert.fail();
+	}
+	@Test
+	public void testSetSugarInRecipe2() throws RecipeException, InventoryException {
+		try {
+			recipe1 = new Recipe();
+			recipe1.setAmtSugar("abc");
+		}
+		catch (RecipeException z) {
+			Assert.assertTrue(true);
+			return;
+		}
+		Assert.fail();
+	}
 
 
 	/**
@@ -336,6 +421,26 @@ public class CoffeeMakerTest {
 		CoffeeMaker coffeeMaker5 = new CoffeeMaker(null, i);
 		coffeeMaker5.addInventory("15", "15", "0", "15");
 		assertEquals("Coffee: 30\nMilk: 30\nSugar: 15\nChocolate: 30\n", coffeeMaker5.checkInventory());
+	}
+
+	@Test
+	public void testCheckInventory3() throws RecipeException, InventoryException {
+		recipe1 = new Recipe();
+		recipe1.setName("Coffee");
+		recipe1.setAmtChocolate("2");
+		recipe1.setAmtCoffee("3");
+		recipe1.setAmtMilk("1");
+		recipe1.setAmtSugar("1");
+		recipe1.setPrice("50");
+		Recipe[] recipes = new Recipe[]{recipe1};
+		RecipeBook r = mock(RecipeBook.class);
+		when(r.getRecipes()).thenReturn(recipes);
+
+		Inventory i = new Inventory();
+		CoffeeMaker coffeeMaker2 = new CoffeeMaker(r, i);
+		coffeeMaker2.makeCoffee(0, 50);
+
+		assertEquals("Coffee: 12\nMilk: 14\nSugar: 14\nChocolate: 13\n",coffeeMaker2.checkInventory());
 	}
 
 
@@ -526,6 +631,10 @@ public class CoffeeMakerTest {
 		when(r.getRecipes()).thenReturn(recipes);
 
 		assertEquals(0, coffeeMaker10.makeCoffee(0, 75));
+		assertEquals(12, i.getCoffee());
+		assertEquals(13, i.getChocolate());
+		assertEquals(14, i.getMilk());
+		assertEquals(14, i.getSugar());
 	}
 
 	/**
@@ -547,17 +656,40 @@ public class CoffeeMakerTest {
 		recipe1.setAmtMilk("1");
 		recipe1.setAmtSugar("1");
 		recipe1.setPrice("50");
-		Recipe[] recipes = new Recipe[]{recipe1, null, null};
+		Recipe[] recipes = new Recipe[]{recipe1};
 		when(r.getRecipes()).thenReturn(recipes);
 
 		assertEquals(75, coffeeMaker11.makeCoffee(2, 75));
 	}
 
+	@Test
+	public void testDeleteCoffee2() throws RecipeException {
+		//Set up for recipe1
+		recipe1 = new Recipe();
+		recipe1.setName("Coffee");
+		recipe1.setAmtChocolate("2");
+		recipe1.setAmtCoffee("3");
+		recipe1.setAmtMilk("1");
+		recipe1.setAmtSugar("1");
+		recipe1.setPrice("50");
 
+		//Set up for recipe2
+		recipe2 = new Recipe();
+		recipe2.setName("Mocha");
+		recipe2.setAmtChocolate("20");
+		recipe2.setAmtCoffee("3");
+		recipe2.setAmtMilk("1");
+		recipe2.setAmtSugar("1");
+		recipe2.setPrice("75");
 
+		Recipe[] recipes = new Recipe[]{recipe1, recipe2};
+		RecipeBook r = mock(RecipeBook.class);
+		when(r.getRecipes()).thenReturn(recipes);
 
-
-
+		Inventory i = new Inventory();
+		CoffeeMaker coffeeMaker10 = new CoffeeMaker(r, i);
+		assertEquals(null, coffeeMaker10.deleteRecipe(1));
+	}
 
 
 	/**
@@ -597,5 +729,91 @@ public class CoffeeMakerTest {
 		int sugar = inventory.getSugar();
 		assertEquals(sugar, 15);
 	}
-	
+
+	@Test
+	public void testRecipeEqual()  {
+		Recipe r = new Recipe();
+		assertNotEquals( r, null);
+	}
+
+	@Test
+	public void testRecipeEqual1()  {
+		Recipe r = new Recipe();
+		assertEquals(r, r);
+
+	}
+
+	@Test
+	public void testRecipeEqual2()  {
+		Recipe r = new Recipe();
+		r.setName("abc");
+		Recipe r1 = new Recipe();
+		r1.setName("abc");
+		assertEquals(r, r1);
+
+	}
+
+	@Test
+	public void testRecipeEqual3()  {
+		Recipe r = new Recipe();
+		r.setName("abc");
+		Recipe r1 = new Recipe();
+		r1.setName("def");
+		assertNotEquals(r, r1);
+
+	}
+
+	@Test
+	public void testRecipeEqual4()  {
+		Recipe r = new Recipe();
+		Inventory i = new Inventory();
+		assertNotEquals(r, i);
+
+	}
+
+	@Test
+	public void testRecipeEqual5()  {
+		Recipe r = new Recipe();
+		r.setName(null);
+		Recipe r1 = new Recipe();
+		r1.setName("def");
+		assertNotEquals(r, r1);
+
+	}
+
+	@Test
+	public void testRecipeEqual6()  {
+		Recipe r = new Recipe();
+		r.setName(null);
+		Recipe r1 = new Recipe();
+		r1.setName(null);
+		assertEquals(r, r1);
+
+	}
+
+	@Test
+	public void testRecipeEqual7()  {
+		Recipe r = new Recipe();
+		r.setName(null);
+		Recipe r1 = new Recipe();
+		r1.setName("abc");
+		assertNotEquals(r, r1);
+
+	}
+
+	@Test
+	public void testRecipeEqual8()  {
+		Recipe r = new Recipe();
+		r.setName("abc");
+		Recipe r1 = new Recipe();
+		r1.setName(null);
+		assertNotEquals(r, r1);
+
+	}
+
+
+
+
+
+
 }

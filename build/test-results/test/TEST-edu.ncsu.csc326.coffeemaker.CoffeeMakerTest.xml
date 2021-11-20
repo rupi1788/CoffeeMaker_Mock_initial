@@ -1,27 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" tests="25" skipped="0" failures="1" errors="0" timestamp="2021-11-19T18:44:53" hostname="HP-LAPTOP-HOME" time="0.763">
+<testsuite name="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-11-20T01:32:28" hostname="HP-LAPTOP-HOME" time="0.785">
   <properties/>
-  <testcase name="testAddInventoryExceptionForMilk1" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.72"/>
-  <testcase name="testAddInventoryExceptionForMilk2" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.001"/>
-  <testcase name="testCheckInventory1" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.0"/>
-  <testcase name="testCheckInventory2" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.001"/>
-  <testcase name="testMakeCoffee" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.0"/>
-  <testcase name="testAddInventoryExceptionForCoffee1" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.0"/>
-  <testcase name="testAddInventoryExceptionForCoffee2" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.0"/>
-  <testcase name="testAddInventory1" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.0"/>
-  <testcase name="testMakeCoffeeWithoutMilk4" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.023"/>
-  <testcase name="testSetIngredientsChocolate1" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.0"/>
-  <testcase name="testMakeCoffeeWithoutChocolate4" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.0"/>
-  <testcase name="testMakeCoffeeWithoutSugar4" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.003"/>
-  <testcase name="testAddInventoryExceptionForChocolate1" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.0"/>
-  <testcase name="testAddInventoryExceptionForChocolate2" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.001"/>
-  <testcase name="testMakeCoffeeWithoutCoffee4" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.001"/>
-  <testcase name="testSetIngredientsSugar1" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.001"/>
-  <testcase name="testAddInventoryExceptionForSugar1" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.003">
-    <failure message="java.lang.AssertionError" type="java.lang.AssertionError">java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:86)
-	at org.junit.Assert.fail(Assert.java:95)
-	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.testAddInventoryExceptionForSugar1(CoffeeMakerTest.java:306)
+  <testcase name="testMakeCoffee6" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.785">
+    <failure message="java.lang.ArrayIndexOutOfBoundsException: 2" type="java.lang.ArrayIndexOutOfBoundsException">java.lang.ArrayIndexOutOfBoundsException: 2
+	at edu.ncsu.csc326.coffeemaker.CoffeeMaker.makeCoffee(CoffeeMaker.java:102)
+	at edu.ncsu.csc326.coffeemaker.CoffeeMakerTest.testMakeCoffee6(CoffeeMakerTest.java:662)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -71,14 +54,6 @@
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
   </testcase>
-  <testcase name="testAddInventoryExceptionForSugar2" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.0"/>
-  <testcase name="testSetIngredientsCoffee1" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.001"/>
-  <testcase name="testMakeCoffee1" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.0"/>
-  <testcase name="testMakeCoffee2" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.001"/>
-  <testcase name="testMakeCoffee3" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.001"/>
-  <testcase name="testMakeCoffee5" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.001"/>
-  <testcase name="testMakeCoffee6" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.001"/>
-  <testcase name="testSetIngredientsMilk1" classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
